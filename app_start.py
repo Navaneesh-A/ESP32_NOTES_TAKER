@@ -30,7 +30,7 @@ def on_key_event(event):
             send_to_badge("[Switched]", current_subject)
             return
             
-        if event.name == 'enter':
+        if event.name == 'enter': 
             requests.post(f"{key_path}/notes/{current_subject}.json", json={"msg": current_line})
             print(f"\n[Saved to Firebase -> {current_subject}]")
             current_line = ""
